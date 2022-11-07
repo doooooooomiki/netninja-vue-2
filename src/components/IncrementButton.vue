@@ -1,5 +1,5 @@
 <template>
-  <button @click="increment()">You clicked me {{ count }} times</button>
+  <button @click="increment">You clicked me {{ count }} times</button>
 </template>
 
 <script lang="ts">
@@ -24,8 +24,12 @@ export default Vue.extend({
   // The reason is arrow functions bind the parent context,
   // so this will not be the Vue instance as you expect
   methods: {
-    increment: function () {
+    //  When listening to native DOM events, the method receives the native event
+    // as the only argument. If using inline statement, the statement has access
+    // to the special $event property: v-on:click="handle('ok', $event)".
+    increment: function (event: MouseEvent) {
       this.count++;
+      console.log(`event type: ${event.type} fired ${this.count} times`);
     },
   },
 });
