@@ -7,11 +7,22 @@ import Vue from "vue";
 
 export default Vue.extend({
   name: "IncrementButton",
+
+  // data
+  // https://v2.vuejs.org/v2/api/#Options-Data
+  // When defining a component, data must be declared as a function that returns
+  // the initial data object, because there will be many instances created using the same definition
   data: function () {
     return {
       count: 0,
     };
   },
+
+  // methods
+  // https://v2.vuejs.org/v2/api/#methods
+  // Note that you should _not_ use an arrow function to define a method
+  // The reason is arrow functions bind the parent context,
+  // so this will not be the Vue instance as you expect
   methods: {
     increment: function () {
       this.count++;
