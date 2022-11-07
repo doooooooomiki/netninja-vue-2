@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <HelloWorld msg="Welcome to Home" />
     <ul>
       <li>
         <a target="_blank" :href="urlVBind">v-bind</a>
@@ -9,14 +10,15 @@
       </li>
     </ul>
     <IncrementButton />
-    <HelloWorld msg="Welcome to Home" />
+    <EventModifiers />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
-import IncrementButton from "@/components/IncrementButton.vue"; // @ is an alias to /src
+import IncrementButton from "@/components/IncrementButton.vue";
+import EventModifiers from "@/components/EventModifiers.vue";
 
 export default Vue.extend({
   name: "HomeView",
@@ -31,6 +33,7 @@ export default Vue.extend({
   components: {
     HelloWorld,
     IncrementButton,
+    EventModifiers,
   },
 });
 </script>
