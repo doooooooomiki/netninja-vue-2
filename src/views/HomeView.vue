@@ -13,6 +13,7 @@
     <EventModifiers />
     <TwoWayDataBinding />
     <ComputedProperties />
+    <ConditionalRendering />
   </div>
 </template>
 
@@ -23,6 +24,7 @@ import IncrementButton from "@/components/IncrementButton.vue";
 import EventModifiers from "@/components/EventModifiers.vue";
 import TwoWayDataBinding from "@/components/TwoWayDataBinding.vue";
 import ComputedProperties from "@/components/ComputedProperties.vue";
+import ConditionalRendering from "@/components/ConditionalRendering.vue";
 
 export default Vue.extend({
   name: "HomeView",
@@ -40,6 +42,7 @@ export default Vue.extend({
     EventModifiers,
     TwoWayDataBinding,
     ComputedProperties,
+    ConditionalRendering,
   },
 });
 </script>
