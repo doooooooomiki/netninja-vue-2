@@ -1,5 +1,13 @@
 <template>
   <div class="home">
+    <ul>
+      <li>
+        <a target="_blank" :href="urlVBind">v-bind</a>
+      </li>
+      <li>
+        <a v-html="aVHtml"></a>
+      </li>
+    </ul>
     <IncrementButton />
     <HelloWorld msg="Welcome to Home" />
   </div>
@@ -12,6 +20,14 @@ import IncrementButton from "@/components/IncrementButton.vue"; // @ is an alias
 
 export default Vue.extend({
   name: "HomeView",
+  data: function () {
+    return {
+      urlVBind: "https://v2.vuejs.org/v2/api/#v-bind",
+      urlVHtml: "https://v2.vuejs.org/v2/api/#v-html",
+      aVHtml:
+        "<a target='_blank' href='https://v2.vuejs.org/v2/api/#v-html'>v-html</a>",
+    };
+  },
   components: {
     HelloWorld,
     IncrementButton,
