@@ -11,6 +11,9 @@
     <form v-on:submit.prevent="onSubmitPrevent">
       <button type="submit">Submit</button>
     </form>
+
+    <!-- https://v2.vuejs.org/v2/guide/events.html#Key-Modifiers -->
+    <input v-on:keyup.enter="onEnter" />
   </section>
 </template>
 
@@ -40,6 +43,9 @@ export default Vue.extend({
     },
     onSubmitPrevent: function () {
       console.log("prevent default");
+    },
+    onEnter: function (event: KeyboardEvent) {
+      console.log(event.key);
     },
   },
 });
