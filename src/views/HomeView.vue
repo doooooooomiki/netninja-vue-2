@@ -12,6 +12,7 @@
     <IncrementButton />
     <EventModifiers />
     <TwoWayDataBinding />
+    <ComputedProperties />
   </div>
 </template>
 
@@ -21,6 +22,7 @@ import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
 import IncrementButton from "@/components/IncrementButton.vue";
 import EventModifiers from "@/components/EventModifiers.vue";
 import TwoWayDataBinding from "@/components/TwoWayDataBinding.vue";
+import ComputedProperties from "@/components/ComputedProperties.vue";
 
 export default Vue.extend({
   name: "HomeView",
@@ -37,6 +39,7 @@ export default Vue.extend({
     IncrementButton,
     EventModifiers,
     TwoWayDataBinding,
+    ComputedProperties,
   },
 });
 </script>
