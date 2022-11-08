@@ -14,6 +14,7 @@
     <TwoWayDataBinding />
     <ComputedProperties />
     <ConditionalRendering />
+    <VFor />
   </div>
 </template>
 
@@ -25,6 +26,7 @@ import EventModifiers from "@/components/EventModifiers.vue";
 import TwoWayDataBinding from "@/components/TwoWayDataBinding.vue";
 import ComputedProperties from "@/components/ComputedProperties.vue";
 import ConditionalRendering from "@/components/ConditionalRendering.vue";
+import VFor from "@/components/VFor.vue";
 
 export default Vue.extend({
   name: "HomeView",
@@ -43,6 +45,7 @@ export default Vue.extend({
     TwoWayDataBinding,
     ComputedProperties,
     ConditionalRendering,
+    VFor,
   },
 });
 </script>
