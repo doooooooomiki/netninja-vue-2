@@ -19,13 +19,13 @@ import Vue from "vue";
 
 export default Vue.extend({
   name: "ComputedProperties",
-  data: function () {
+  data() {
     return {
       message: "hello",
     };
   },
   computed: {
-    reversedMessage: function () {
+    reversedMessage(): string {
       return this.message.split("").reverse().join("");
     },
   },
