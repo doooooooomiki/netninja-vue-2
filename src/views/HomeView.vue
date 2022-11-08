@@ -15,6 +15,7 @@
     <ComputedProperties />
     <ConditionalRendering />
     <VFor />
+    <RefAttribute />
   </div>
 </template>
 
@@ -27,6 +28,7 @@ import TwoWayDataBinding from "@/components/TwoWayDataBinding.vue";
 import ComputedProperties from "@/components/ComputedProperties.vue";
 import ConditionalRendering from "@/components/ConditionalRendering.vue";
 import VFor from "@/components/VFor.vue";
+import RefAttribute from "@/components/RefAttribute.vue";
 
 export default Vue.extend({
   name: "HomeView",
@@ -46,6 +48,7 @@ export default Vue.extend({
     ComputedProperties,
     ConditionalRendering,
     VFor,
+    RefAttribute,
   },
 });
 </script>
