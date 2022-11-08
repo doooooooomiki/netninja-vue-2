@@ -19,6 +19,7 @@
     <!-- Even though `42` is static, we need v-bind to tell Vue that -->
     <!-- this is a JavaScript expression rather than a string.       -->
     <ComponentProps isPublished title="Props" :likes="42" />
+    <EmitEvent @my-event="myEventFired" />
   </div>
 </template>
 
@@ -33,6 +34,7 @@ import ConditionalRendering from "@/components/ConditionalRendering.vue";
 import VFor from "@/components/VFor.vue";
 import RefAttribute from "@/components/RefAttribute.vue";
 import ComponentProps from "@/components/ComponentProps.vue";
+import EmitEvent from "@/components/EmitEvent.vue";
 
 export default Vue.extend({
   name: "HomeView",
@@ -54,6 +56,12 @@ export default Vue.extend({
     VFor,
     RefAttribute,
     ComponentProps,
+    EmitEvent,
+  },
+  methods: {
+    myEventFired(e: any) {
+      console.log(e);
+    },
   },
 });
 </script>
