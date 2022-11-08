@@ -16,6 +16,9 @@
     <ConditionalRendering />
     <VFor />
     <RefAttribute />
+    <!-- Even though `42` is static, we need v-bind to tell Vue that -->
+    <!-- this is a JavaScript expression rather than a string.       -->
+    <ComponentProps isPublished title="Props" :likes="42" />
   </div>
 </template>
 
@@ -29,6 +32,7 @@ import ComputedProperties from "@/components/ComputedProperties.vue";
 import ConditionalRendering from "@/components/ConditionalRendering.vue";
 import VFor from "@/components/VFor.vue";
 import RefAttribute from "@/components/RefAttribute.vue";
+import ComponentProps from "@/components/ComponentProps.vue";
 
 export default Vue.extend({
   name: "HomeView",
@@ -49,6 +53,7 @@ export default Vue.extend({
     ConditionalRendering,
     VFor,
     RefAttribute,
+    ComponentProps,
   },
 });
 </script>
