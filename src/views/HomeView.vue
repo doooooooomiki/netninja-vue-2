@@ -20,6 +20,7 @@
     <!-- this is a JavaScript expression rather than a string.       -->
     <ComponentProps isPublished title="Props" :likes="42" />
     <EmitEvent @my-event="myEventFired" />
+    <LifeCycleHooks />
   </div>
 </template>
 
@@ -35,6 +36,7 @@ import VFor from "@/components/VFor.vue";
 import RefAttribute from "@/components/RefAttribute.vue";
 import ComponentProps from "@/components/ComponentProps.vue";
 import EmitEvent from "@/components/EmitEvent.vue";
+import LifeCycleHooks from "@/components/LifeCycleHooks.vue";
 
 export default Vue.extend({
   name: "HomeView",
@@ -57,6 +59,7 @@ export default Vue.extend({
     RefAttribute,
     ComponentProps,
     EmitEvent,
+    LifeCycleHooks,
   },
   methods: {
     myEventFired(e: any) {
