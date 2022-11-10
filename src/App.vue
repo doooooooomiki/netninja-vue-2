@@ -14,6 +14,9 @@
         <li>
           <router-link to="/user">User</router-link>
         </li>
+        <li>
+          <router-link to="/categories">Categories</router-link>
+        </li>
       </ul>
     </nav>
     <router-view />

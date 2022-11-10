@@ -64,6 +64,19 @@ const routes: Array<RouteConfig> = [
     // which is lazy-loaded when the route is visited.
     component: () => import("../views/PostView.vue"),
   },
+
+  {
+    path: "/categories",
+    name: "categories",
+    component: () => import("../views/CategoriesView.vue"),
+    children: [
+      {
+        path: ":category",
+        name: "category",
+        component: () => import("../components/category/CategoryComponent.vue"),
+      },
+    ],
+  },
 ];
 
 const router = new VueRouter({
