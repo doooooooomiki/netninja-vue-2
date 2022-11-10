@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>Vue Router</h1>
+    <h2>Posts</h2>
   </section>
 </template>
 
@@ -8,7 +8,10 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  name: "RouterView",
+  name: "UserPosts",
+  mounted() {
+    console.log(this.$route.params);
+  },
 });
 </script>
 

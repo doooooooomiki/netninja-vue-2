@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>Vue Router</h1>
+    <h2>Profile: {{ $route.params.username }}</h2>
   </section>
 </template>
 
@@ -8,7 +8,10 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  name: "RouterView",
+  name: "UserProfile",
+  mounted() {
+    console.log(this.$route.params);
+  },
 });
 </script>
 

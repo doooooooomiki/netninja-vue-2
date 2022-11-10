@@ -11,6 +11,9 @@
         <li>
           <router-link to="/router">Router</router-link>
         </li>
+        <li>
+          <router-link to="/user">User</router-link>
+        </li>
       </ul>
     </nav>
     <router-view />
